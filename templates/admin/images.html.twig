@@ -1,0 +1,18 @@
+{# templates/admin/index.html.twig #}
+{#{{ dump(field.value) }}#}
+<div class="form-widget">
+    {% for images in field.value %}
+
+
+        <a href="#" class="ea-lightbox-thumbnail" data-ea-lightbox-content-selector="#ea-lightbox-{{ images.id }}">
+            <img src="/uploads/image/{{ images.name }}" class="img-fluid">
+        </a>
+
+        <div id="ea-lightbox-{{ images.id }}" class="ea-lightbox">
+            <img src="/uploads/image/{{ images.name }}">
+        </div>
+
+    {% endfor %}
+</div>
+{#
+{% extends '@EasyAdmin/page/content.html.twig' %}#}

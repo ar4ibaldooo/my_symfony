@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    <h1>Добавление пользователя</h1>
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.username, {
+            label: 'Логин'
+        }) }}
+        {{ form_row(registrationForm.plainPassword, {
+            label: 'Пароль'
+        }) }}
+        {{ form_row(registrationForm.roles, {
+            label: 'Роль'
+        }) }}
+
+        <button type="submit" class="btn">Сохранить</button>
+    {{ form_end(registrationForm) }}
+{% endblock %}
