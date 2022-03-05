@@ -19,7 +19,6 @@ use Faker\Factory;
              $product->setPrice(mt_rand(10, 100));
              $manager->persist($product);
          }
-
          $manager->flush();
      }
  }
