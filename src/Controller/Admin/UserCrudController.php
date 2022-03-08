@@ -22,7 +22,8 @@ class UserCrudController extends AbstractCrudController
     {
         return parent::configureActions($actions)
 
-            ->disable(Action::EDIT);
+            ->disable(Action::EDIT)
+            ->disable(Action::NEW);
 
     }
 
